@@ -12,7 +12,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: auto; /* Зменшено для мобільного */
     grid-template-areas: 
         "header header header"
         "left center right"
@@ -175,14 +175,15 @@ nav ul li a:hover {
     }
 
     .container {
-        width: 1200px; /* Фіксована ширина для контейнера */
-        display: flex;
-        flex-direction: row; /* Визначаємо горизонтальне розташування */
+        display: flex; /* Вирівнюємо елементи в ряд */
+        flex-direction: row; /* Горизонтальне розташування */
+        overflow-x: auto; /* Додаємо горизонтальну прокрутку */
+        min-width: 100vw; /* Мінімальна ширина для контейнера */
     }
 
     .left, .center, .right {
-        flex: 1; /* Вирівнюємо елементи за шириною */
-        min-width: 300px; /* Мінімальна ширина для кожного елемента */
+        flex: 0 0 auto; /* Забезпечуємо, що елементи не стискаються */
+        width: 300px; /* Фіксована ширина для кожного блоку */
     }
 
     .header {
@@ -215,4 +216,5 @@ nav ul li a:hover {
         font-size: 0.8rem; /* Зменшено для мобільного */
     }
 }
+
 
