@@ -12,12 +12,12 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: auto 1fr auto auto;
+    grid-template-rows: 1fr 3fr auto 1fr;
     grid-template-areas: 
         "header header header"
         "left center right"
         "left center-footer right"
-        "footer footer footer";
+        "footer footer right";
     width: 100vw;
     min-height: 150vh;
     border: 2px solid #388e3c; 
@@ -103,7 +103,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color:#388e3c; 
+    color: #388e3c; 
     font-weight: bold; 
     padding: 10px;
     border-radius: 4px; 
@@ -124,7 +124,7 @@ nav ul li a:hover {
 }
 
 .news-section h2 {
-    color:  #000; 
+    color: #000; 
 }
 
 .news-item h3 {
@@ -134,7 +134,7 @@ nav ul li a:hover {
 .footer h3 {
     margin: 0; 
     color: #388e3c; 
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
 }
 
 .news-item p {
@@ -171,7 +171,7 @@ nav ul li a:hover {
 /* Мобільна верстка */
 @media (max-width: 768px) {
     .container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Однополоса */
         grid-template-rows: auto auto auto auto auto;
         grid-template-areas: 
             "header"
@@ -183,7 +183,7 @@ nav ul li a:hover {
     }
 
     .header {
-        font-size: 1.5rem; 
+        font-size: 1.5rem; /* Зменшено для мобільного */
         padding: 15px;
     }
 
@@ -192,24 +192,23 @@ nav ul li a:hover {
     }
 
     .news-section h2 {
-        font-size: 1.2rem; 
+        font-size: 1.2rem; /* Зменшено для мобільного */
     }
 
     .news-item h3 {
-        font-size: 1rem; 
+        font-size: 1rem; /* Зменшено для мобільного */
     }
 
     .news-item p {
-        font-size: 0.9rem; 
+        font-size: 0.9rem; /* Зменшено для мобільного */
     }
 
     .read-more {
-        padding: 8px 12px;
-        font-size: 0.9rem; 
+        padding: 8px 12px; /* Зменшено для мобільного */
+        font-size: 0.9rem; /* Зменшено для мобільного */
     }
 
     .center-footer p {
-        font-size: 0.8rem; 
+        font-size: 0.8rem; /* Зменшено для мобільного */
     }
 }
-
