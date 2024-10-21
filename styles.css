@@ -170,16 +170,19 @@ nav ul li a:hover {
 
 /* Мобільна верстка */
 @media (max-width: 768px) {
+    body {
+        overflow-x: auto; /* Додаємо горизонтальну прокрутку для тіла */
+    }
+
     .container {
-        grid-template-columns: 1fr; /* Однополоса */
-        grid-template-rows: auto auto auto auto auto;
-        grid-template-areas: 
-            "header"
-            "center"
-            "left"
-            "right"
-            "center-footer"
-            "footer";
+        width: 1200px; /* Фіксована ширина для контейнера */
+        display: flex;
+        flex-direction: row; /* Визначаємо горизонтальне розташування */
+    }
+
+    .left, .center, .right {
+        flex: 1; /* Вирівнюємо елементи за шириною */
+        min-width: 300px; /* Мінімальна ширина для кожного елемента */
     }
 
     .header {
@@ -212,3 +215,4 @@ nav ul li a:hover {
         font-size: 0.8rem; /* Зменшено для мобільного */
     }
 }
+
